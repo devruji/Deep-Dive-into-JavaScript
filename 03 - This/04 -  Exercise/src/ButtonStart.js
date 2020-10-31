@@ -1,10 +1,11 @@
 // 1. What would happen after clicking the button?
 // 2. Fix the code snippet to print out "My button name is Click me" after clicking the button
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Button extends Component {
   constructor(props) {
     super(props);
+    this.log = this.log.bind(this);
   }
 
   log() {

@@ -8,6 +8,18 @@ const ironMan = {
   }
 };
 
-const ia = ironMan.attack;
+const ia = ironMan.attack.bind(ironMan);
 
 ia();
+
+///////////// 2 /////////////
+const ironMan = {
+  name: 'Ironman',
+  attack() {
+    console.log(`${this.name} is attacking`);
+  }
+};
+
+const ia = ironMan.attack;
+
+ia.call(ironMan);

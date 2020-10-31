@@ -18,4 +18,27 @@ const antMan = {
 };
 
 ironMan.attack();
-antMan.attack()();
+antMan.attack().bind(antMan)();
+
+const antMan2 = {
+  name: 'Antman',
+  attack() {
+    return function () {
+      console.log(this);
+    }.bind(this);
+  }
+};
+
+antMan2.attack()();
+
+const antMan3 = {
+  name: 'Antman',
+  attack() {
+    return function () {
+      console.log(this);
+    };
+  }
+};
+
+var antMan4 = antMan3.attack();
+antMan4.call(antMan3)

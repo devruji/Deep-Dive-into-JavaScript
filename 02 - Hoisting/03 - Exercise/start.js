@@ -6,8 +6,21 @@ function marvel() {
   const heroes = ['Thor', 'Antman', 'Spiderman', 'Ironman'];
 
   for (var i = 0; i < heroes.length; i++) {
+    console.log(heroes[i]);
+    // setTimeout(() => {
+    //   console.log(heroes[i]);
+    // }, 1000 * (i + 1));
+  }
+  console.log(i);
+}
+marvel();
+
+function marvel() {
+  const heroes = ['Thor', 'Antman', 'Spiderman', 'Ironman'];
+
+  for (var i = 0; i < heroes.length; i++) {
     setTimeout(() => {
-      console.log(heroes[i]);
+      console.log(heroes.reverse()[i-=1]);
     }, 1000 * (i + 1));
   }
   console.log(i);

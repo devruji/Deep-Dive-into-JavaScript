@@ -5,7 +5,7 @@ const ironMan = {
   name: 'Ironman',
   attack: function () {
     console.log(`${this.name} is attacking`);
-    move();
+    ironMan.move.call({'name': this.name});
   },
   move: function () {
     console.log(`${this.name} is moving`);

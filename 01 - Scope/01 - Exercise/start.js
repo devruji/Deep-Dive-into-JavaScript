@@ -1,14 +1,39 @@
-// 1. How many execution contexts do we have?
+// 1. How many execution contexts do we have? -> 2
 // 2. Guess the result of the code snippet
 // 3. Correct the code snippet to print out "Ironman" and "Thor" respectively
 
-var heroName = 'Thor';
+// [Global - Scope]
+var heroName = "Thor";
+
 function marvel() {
   if (heroName.length < 5) {
-    heroName = 'Ironman';
+    heroNameInner = "Ironman";
+    console.log("In function hero name", heroNameInner);
   }
 
-  console.log('In function hero name', heroName);
 }
+
+// [Marvel Execution Context]
 marvel();
-console.log('Outside function hero name', heroName);
+
+// [Global - Scope]
+console.log("Outside function hero name", heroName);
+
+//////////////// Method 2 ////////////////////
+
+// [Global - Scope]
+var heroName = "Thor";
+
+function marvel() {
+  if (heroName.length < 5) {
+    let heroName = "Ironman";
+    console.log("In function hero name", heroName);
+  }
+
+}
+
+// [Marvel Execution Context]
+marvel();
+
+// [Global - Scope]
+console.log("Outside function hero name", heroName);

@@ -5,7 +5,9 @@
 const API_URL = 'https://source.unsplash.com/random';
 
 async function getImage() {
+    const x = await fetch(API_URL)
 
+    console.log(x)
 }
 
 getImage();

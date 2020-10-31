@@ -3,10 +3,15 @@
 // 2. Guess the result of the code snippet
 // 3. Correct the code snippet to print out "My hero name is Antman"
 
-const heroName = 'Antman';
+// const heroName = 'Antman';
 
-function marvel() {
-  printHeroName();
-}
+// function marvel() {
+//   printHeroName();
+// }
 
-marvel();
+// marvel();
+
+(() => {
+  const heroName = 'Antman'
+  printHeroName(heroName)
+})();
